@@ -4,7 +4,7 @@ from groq import Client
 def sentiment_analysis(text):
     """Sentiment Analysis"""
     try:
-        client = Client(api_key='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')
+        client = Client(api_key=st.secrets['GROQ_API'])
         
         chat_completion = client.chat.completions.create(
             messages=[
